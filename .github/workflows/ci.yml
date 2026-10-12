@@ -57,6 +57,10 @@ jobs:
         with:
           context: .
           push: true
+         
           tags: |
-            ghcr.io/${{ github.repository_owner }}/farmer-marketplace:latest
-            ghcr.io/${{ github.repository_owner }}/farmer-marketplace:${{ github.sha }}
+            ghcr.io/${{ steps.image-name.outputs.owner }}/farmer-marketplace:latest
+            ghcr.io/${{ steps.image-name.outputs.owner }}/farmer-marketplace:${{ github.sha }}
+
+        env:
+          IMAGE_OWNER: ${{ github.repository_owner }}
