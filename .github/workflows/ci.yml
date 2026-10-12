@@ -52,15 +52,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      
       - name: Build and publish Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
           push: true
-         
           tags: |
-            ghcr.io/${{ steps.image-name.outputs.owner }}/farmer-marketplace:latest
-            ghcr.io/${{ steps.image-name.outputs.owner }}/farmer-marketplace:${{ github.sha }}
+            ghcr.io/subaunsh/farmer-marketplace:latest
+            ghcr.io/subaunsh/farmer-marketplace:${{ github.sha }}
 
-        env:
-          IMAGE_OWNER: ${{ github.repository_owner }}
