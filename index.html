@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A marketplace connecting farmers with customers.">
+  <title>FarmFresh | Farmer Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#">🌱 FarmFresh</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#market">Marketplace</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="cart">🛒 Basket <span id="cart-count">0</span></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">FRESH FROM THE FARM</p>
+        <h1>Good food starts<br>with good farmers.</h1>
+        <p>Discover fresh produce and connect directly
+          with local farmers.</p>
+        <a class="primary-btn" href="#market">Explore Crops ↓</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">🌾 🥬 🍅</div>
+    </section>
+
+    <section class="market section" id="market">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OUR MARKETPLACE</p>
+          <h2>Fresh from our farmers</h2>
+          <p>Browse produce and explore sample farm listings.</p>
+        </div>
+      </div>
+
+      <div class="filters">
+        <input id="search" type="search"
+          placeholder="Search crops..." aria-label="Search crops">
+        <select id="category" aria-label="Filter by category">
+          <option value="All">All categories</option>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Fruits">Fruits</option>
+          <option value="Grains">Grains</option>
+        </select>
+      </div>
+
+      <p id="results-message" role="status"></p>
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <section class="about section" id="about">
+      <p class="eyebrow">OUR PURPOSE</p>
+      <h2>Supporting farmers, one harvest at a time.</h2>
+      <p>FarmFresh is a student project prototype demonstrating
+        how digital technology can help farmers showcase their crops.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 FarmFresh | DevOps Mini Project</p>
+    <p>Educational prototype. Listings and prices are sample data.</p>
+  </footer>
+</body>
+</html>
